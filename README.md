@@ -42,9 +42,8 @@ math
   Returns true if a point x,y is inside an obstacle
   Returns false if point is outside obstacle
 ### User Input (Coordinates)
-  Collects start coordinates, end coordinates, step size, and starting angle
-  Starting angle is input as degrees, then code converts to radians
-  Requires user to re type in coordinate is inside obstacle
+  Collects start coordinates, end coordinates, right wheel RPM, left wheel RPM and clearance
+  
 ### Action Set
   Defines five actions sets relative to current x,y, and theta angle
     Move straight
