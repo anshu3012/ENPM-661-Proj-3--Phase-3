@@ -8,7 +8,9 @@ In this project we will navigate a differential drive robot (TurtleBot 2 / Turtl
 
 ## Dependencies
 numpy 
+
 matplotlib
+
 math 
 
 ## Instructions to run 
@@ -33,7 +35,7 @@ math
   Error-checking functions
     Helps restrict inputs when asking user
   ### Robot radius and clearance
-    User inputs for radius and clearance
+   User inputs for radius and clearance
 ### Map
   Generates the map using algebraic expressions to represent obstacles
 ### Obstacle Check
