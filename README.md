@@ -17,7 +17,23 @@ math
 
  ## Program Explanation
  Searches fixed map to find optimal path from user-defined start and end
- Action set limited to 5 directions (0 deg, 30 deg, 60 deg, -30 deg, -60 deg)
+ Action set limited to 8 actions  
+ 
+    0,rpm1, 
+    
+    rpm1,0
+
+    rpm1,rpm1
+
+    0,rpm2
+
+    rpm2,0
+
+    rpm2,rpm2
+
+    rpm1,rpm2
+
+    rpm2,rpm1
  
  While searching, threshold of 0.0204 used for X and Y directions and 30 degrees for angle
  
