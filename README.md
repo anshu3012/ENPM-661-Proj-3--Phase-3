@@ -19,7 +19,7 @@ math
  Searches fixed map to find optimal path from user-defined start and end
  Action set limited to 5 directions (0 deg, 30 deg, 60 deg, -30 deg, -60 deg)
  
- While searching, threshold of 0.5 used for X and Y directions and 30 degrees for angle
+ While searching, threshold of 0.0204 used for X and Y directions and 30 degrees for angle
  
  The goal is determined reached when within 1.5 radius region of user-defined end coordinates
  
@@ -31,26 +31,34 @@ math
 ## Different sections of code:
 ### Libraries
   Imports all libraries
+  
 ### User Inputs (Error-checking and robot dimensions)
   Error-checking functions
     Helps restrict inputs when asking user
+    
   ### Robot radius and clearance
    User inputs for radius and clearance
+   
 ### Map
   Generates the map using algebraic expressions to represent obstacles
+  
 ### Obstacle Check
   Returns true if a point x,y is inside an obstacle
   Returns false if point is outside obstacle
+  
 ### User Input (Coordinates)
-  Collects start coordinates, end coordinates, right wheel RPM, left wheel RPM and clearance
+  Collects start coordinates, end coordinates,initial angle (in degrees), right wheel RPM, left wheel RPM and clearance
   
 ### Action Set
-  Defines five actions sets relative to current x,y, and theta angle
-    Move straight
-    Up 30 degrees
-    Up 60 degrees
-    Down 30 degrees
-    Down 60 degrees
+  Defines 8 actions sets on the basis of the wheel RPMs
+    0,rpm1
+    rpm1,0
+    rpm1,rpm1
+    0,rpm2
+    rpm2,0
+    rpm2,rpm2
+    rpm1,rpm2
+    rpm2,rpm1
 
 ## Node class and functions
   Functions to store node information and calculate total cost
