@@ -51,13 +51,21 @@ math
   
 ### Action Set
   Defines 8 actions sets on the basis of the wheel RPMs
+
     0,rpm1
+
     rpm1,0
+
     rpm1,rpm1
+
     0,rpm2
+
     rpm2,0
+
     rpm2,rpm2
+
     rpm1,rpm2
+
     rpm2,rpm1
 
 ## Node class and functions
